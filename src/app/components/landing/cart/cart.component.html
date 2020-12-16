@@ -1,0 +1,206 @@
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- section title -->
+
+
+
+            <!-- /section title -->
+            <div class="col" *ngIf="!purchased">
+
+
+                <div class="row" *ngIf="this.cartItems.length > 0">
+
+                    <div class="col-md-8">
+
+                        <div class="section-title">
+
+                            <div class="col-md-6">
+                                <h3 class="title">My Cart ({{cartItemsCount}})</h3>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="store-sort">
+                                    <label>
+                                        Delivery To :
+                                        <select class="input-select select-sty">
+                                            <option value="0">Popular</option>
+                                            <option value="1">Position</option>
+                                        </select>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row row-mar-2" *ngFor="let item of cartItems">
+
+                            <div class="col-md-4">
+                                <img src="{{item.imageUrl}}" alt="" class="img-class">
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="product-details">
+                                    <h2 class="product-name h2-sty"> {{item.productName}}</h2>
+                                    <div>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star" *ngFor="let item of [].constructor(item.stars)"></i>
+                                        </div>
+                                        <a class="review-link" href="javascript:;">{{item.reviewsCount}} Review(s) | Add your review</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="product-price product-price-sty">${{item.totalPrice}} <del
+                                                class="product-old-price">${{item.totalOfferPrice}}</del></h3>
+                                        <span class="product-available">In Stock</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <small>7 Days Replacement Policy</small>
+                            </div>
+
+
+                            <div class="row col-md-12">
+                                <div class="col-md-4">
+                                    <div class="add-to-cart col-md-8">
+                                        <div class="qty-label">
+                                            <div class="input-number">
+                                                <input type="number" value="{{item.itemsCount}}" >
+                                                <span class="qty-up" (click)="itemtoCart(item, 'ADD')">+</span>
+                                                <span class="qty-down" (click)="itemtoCart(item, 'REMOVE')">-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-8">
+                                    <h2 class="product-name h2-sty remove-item" (click)="removeItemCart(item)">SAVE FOR LATER | REMOVE</h2>
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- Order Details -->
+                    <div class="col-md-4 order-details">
+                        <div class="section-title text-center">
+                            <h3 class="title">Your Order</h3>
+                        </div>
+                        <div class="order-summary">
+                            <div class="order-col">
+                                <div><strong>PRODUCT</strong></div>
+                                <div><strong>TOTAL</strong></div>
+                            </div>
+                            <div class="order-products">
+                                <div class="order-col" *ngFor="let item of cartItems">
+                                    <div>{{item.itemsCount}}x {{item.productName}}</div>
+                                    <div>${{item.totalPrice}}</div>
+                                </div>
+                            </div>
+                            <div class="order-col">
+                                <div>Shiping</div>
+                                <div><strong>FREE</strong></div>
+                            </div>
+                            <div class="order-col">
+                                <div><strong>TOTAL</strong></div>
+                                <div><strong class="order-total">${{totalAmount}}</strong></div>
+                            </div>
+                        </div>
+                        <div class="payment-method">
+                            <div class="input-radio">
+                                <input type="radio" name="payment" id="payment-1">
+                                <label for="payment-1">
+                                    <span></span>
+                                    Direct Bank Transfer
+                                </label>
+                                <div class="caption">
+                                    <p>Direct Bank Transfer</p>
+                                </div>
+                            </div>
+                            <div class="input-radio">
+                                <input type="radio" name="payment" id="payment-2">
+                                <label for="payment-2">
+                                    <span></span>
+                                    Cheque Payment
+                                </label>
+                                <div class="caption">
+                                    <p> Cheque Payment.</p>
+                                </div>
+                            </div>
+                            <div class="input-radio">
+                                <input type="radio" name="payment" id="payment-3">
+                                <label for="payment-3">
+                                    <span></span>
+                                    Paypal System
+                                </label>
+                                <div class="caption">
+                                    <p> Paypal System.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">
+                                <span></span>
+                                I've read and accept the <a href="#">terms &amp; conditions</a>
+                            </label>
+                        </div>
+                        <a href="javascript:;" class="primary-btn order-submit" (click)="placeOrder()">Place order</a>
+                    </div>
+                    <!-- /Order Details -->
+                </div>
+
+                <div class="row" *ngIf="this.cartItems.length == 0">
+
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-sm-offset-3">
+                        <br> <br> <br> 
+                        <h1 style="color:#da064c">Your cart is empty</h1>
+                        <br>
+                        <p style="font-size:20px;color:#5C5C5C;"><a href="#/landing/landing">Click here to go to products. </a></p>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+               
+
+
+            </div>
+
+            <div class="col" *ngIf="purchased">
+
+                <div class="row text-center">
+                    <div class="col-sm-6 col-sm-offset-3">
+                    <br><br> <h2 style="color:#0fad00">Products placed successfully</h2>
+                    <h3>Dear, Saravanan Nandhan</h3>
+                    <p style="font-size:20px;color:#5C5C5C;">We are happy to let you know that an item from your placed successfully. </p>
+                <br><br>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->

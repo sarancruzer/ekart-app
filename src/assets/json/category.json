@@ -1,0 +1,22 @@
+[
+    {
+      "id": "1",
+      "categoryName": "Hot Deals"      
+    },
+    {
+      "id": "2",
+      "categoryName": "Laptops"    
+    },
+    {
+      "id": "3",
+      "categoryName": "Smartphones"     
+    },
+    {
+      "id": "4",
+      "categoryName": "Cameras"      
+    },
+    {
+      "id": "5",
+      "categoryName": "Accessories"     
+    }
+  ]

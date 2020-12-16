@@ -1,0 +1,92 @@
+[
+    {
+      "id": "1",
+      "categoryName": "Laptops",
+      "productName": "Dell",
+      "actualPrice": "8700",
+      "offerPrice": "7000",
+      "stars": 4,
+      "imageUrl": "assets/img/product01.png",
+      "reviewsCount": 5
+    },
+    {
+      "id": "2",
+      "categoryName": "Laptops",
+      "productName": "HP ",
+      "actualPrice": "9500",
+      "offerPrice": "8000",
+      "stars": 5,
+      "imageUrl": "assets/img/product03.png",
+      "reviewsCount": 7
+    },
+    {
+      "id": "3",
+      "categoryName": "Laptops",
+      "productName": "Dell 213",
+      "actualPrice": "7500",
+      "offerPrice": "5000",
+      "stars": 3,
+      "imageUrl": "assets/img/product01.png",
+      "reviewsCount": 16
+    },
+    {
+      "id": "4",
+      "categoryName": "Laptops",
+      "productName": "Asus 375",
+      "actualPrice": "15000",
+      "offerPrice": "9000",
+      "stars": 2,
+      "imageUrl": "assets/img/product03.png",
+      "reviewsCount": 10
+    },
+    {
+      "id": "5",
+      "categoryName": "Laptops",
+      "productName": "SONY 875",
+      "actualPrice": "7800",
+      "offerPrice": "6000",
+      "stars": 3,
+      "imageUrl": "assets/img/product01.png",
+      "reviewsCount": 17
+    },
+    {
+      "id": "6",
+      "categoryName": "Laptops",
+      "productName": "Apple Macbook",
+      "actualPrice": "21000",
+      "offerPrice": "19000",
+      "stars": 5,
+      "imageUrl": "assets/img/product03.png",
+      "reviewsCount": 5
+    },
+    {
+      "id": "7",
+      "categoryName": "Laptops",
+      "productName": "Lenova G457",
+      "actualPrice": "77000",
+      "offerPrice": "6000",
+      "stars": 4,
+      "imageUrl": "assets/img/product01.png",
+      "reviewsCount": 7
+    },
+    {
+      "id": "8",
+      "categoryName": "Laptops",
+      "productName": "HP 457",
+      "actualPrice": "9800",
+      "offerPrice": "8500",
+      "stars": 3,
+      "imageUrl": "assets/img/product03.png",
+      "reviewsCount": 13
+    },
+    {
+      "id": "9",
+      "categoryName": "Laptops",
+      "productName": "Dell 578",
+      "actualPrice": "6000",
+      "offerPrice": "5000",
+      "stars": 4,
+      "imageUrl": "assets/img/product01.png",
+      "reviewsCount": 15
+    }
+  ]
