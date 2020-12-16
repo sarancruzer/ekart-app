@@ -236,8 +236,9 @@ textarea.input {
 \*----------------------------*/
 
 .section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  
 }
 
 .section-title {
@@ -295,6 +296,12 @@ textarea.input {
 .section-title .section-nav .products-slick-nav {
   top: 0px;
   right: 0px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
 }
 
 /*----------------------------*\
